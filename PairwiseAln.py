@@ -99,9 +99,10 @@ def main():
     for outer_key, inner_dict in alnScores.items():
         scores[outer_key] = {inner_key: values['Score'] for inner_key, values in inner_dict.items()}
     df = pd.DataFrame(scores)
-    df = df.fillna(0)
+    df.head()
+    # df = df.fillna(0)
     
-    df.to_csv('alnScoreMatrix.csv', index=True)
+    # df.to_csv('alnScoreMatrix.csv', index=True)
         
 if __name__ == '__main__':
    main()
