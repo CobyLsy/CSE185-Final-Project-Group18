@@ -1,7 +1,6 @@
 import argparse
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
+
 
 #LocalAlignment Implemented Using Smith-Waterman
 def LocalAlignment(match_reward: int, mismatch_penalty: int, indel_penalty: int,
