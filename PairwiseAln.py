@@ -105,5 +105,28 @@ def main():
     df.to_csv('alnScoreMatrix.csv', index=True)
         
 if __name__ == '__main__':
-   main()
-   
+    main()
+    header = None
+    sortedDict = {}
+    with open ('alnScoreMatrix.csv', 'r') as file:
+        header = file.readline()
+        verticalHeaders = {}
+        for line in file.readlines():
+            line = line.strip()
+            verticalHeaders[line.split(',')[0]] = line.split(',')[1:]
+        
+        sortedDict = dict(sorted(verticalHeaders.items()))
+        
+
+    file.close()
+    print(sortedDict)
+    with open ('alnScoreMatrixSorted.csv', 'w') as file:
+        file.write(header)
+        for key, value in sortedDict.items():
+            values = ''
+            for i in value:
+                values += i + ','
+            values = values[:-1]
+            file.write(key + ',' + values + '\n')
+
+    file.close
