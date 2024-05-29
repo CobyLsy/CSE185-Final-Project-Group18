@@ -119,7 +119,7 @@ if __name__ == '__main__':
         
 
     file.close()
-    print(sortedDict)
+    
     with open ('alnScoreMatrixSorted.csv', 'w') as file:
         file.write(header)
         for key, value in sortedDict.items():
