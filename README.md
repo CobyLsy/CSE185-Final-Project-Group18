@@ -25,5 +25,10 @@ We’d like to implement an alternative approach to the computationally expensiv
    - Format: `python PairwiseAln.py <fasta_file> -m <match Reward> -s <mismatch Penalty> -d <indel Penalty>`
    - Example: `python PairwiseAln.py test_data/pone.0192851.s009.faa -m 1 -s -10 -d -2`
    - Example Output: **alnScoreMatrix.csv** File that shows pairwise local alignment results between every sequence in the input fasta file.
-
-3. Hiearchical Clustering and Visualization: To Be Implemented
+3. Processibng of BitScoreMatrix for Clustering:
+   - `python BitscoreParse.py ssearchResultFile` to generate similarity matrix and dissimilarity matrix based on our normalization process.
+   - Example: `python BitscoreParse.py ssearchResults.txt`
+   - Example Output: **BitScoreMatrixRaw.csv** - the raw bit score matrix, **symmetric_matrix_Normalized.csv** - the similarity matrix, and **dissimilarity_matrix.csv** - the dissimilarity matrix.
+4. Hiearchical Clustering and Visualization: 
+   - Our R file Clustering.R performs hiearchical clustering using [agnes](https://www.rdocumentation.org/packages/cluster/versions/2.1.6/topics/agnes), and generates a **newick** tree file;
+   - Example Output: **TreeOutputDiss**
