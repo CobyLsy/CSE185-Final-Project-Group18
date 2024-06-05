@@ -26,5 +26,5 @@ We’d like to implement an alternative approach to the computationally expensiv
    - Example: `python BitscoreParse.py ssearchResults.txt`
    - Example Output: **BitScoreMatrixRaw.csv** - the raw bit score matrix, **symmetric_matrix_Normalized.csv** - the similarity matrix, and **dissimilarity_matrix.csv** - the dissimilarity matrix.
 3. Hiearchical Clustering and Visualization: 
-   - Our R file Clustering.R performs hiearchical clustering using [agnes](https://www.rdocumentation.org/packages/cluster/versions/2.1.6/topics/agnes), and generates a **newick** tree file;
+   - Our R file `Clustering.R` performs hiearchical clustering using [agnes](https://www.rdocumentation.org/packages/cluster/versions/2.1.6/topics/agnes), and generates a **newick** tree file;
    - Example Output: **TreeOutputDiss**
