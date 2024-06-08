@@ -14,7 +14,18 @@ We’d like to implement an alternative approach to the computationally expensiv
 3. Perform hiearchical clustering based on the dissimilarity matrix of sequences in order to categorize them, and save the result into a **newick** tree file(identical in format to that of lab7)
 4. Visualize the resulting tree to compare with/benchmark against the results of lab 7 (the phylogenic approach using multiple sequence alignment and **RAxML**).
 
-## How to Run
+## QuickRun
+
+```
+brew install brewsci/bio/fasta  #(if fasta36 has not been installed
+
+ssearch36 -m 8C test_data/pone.0192851.s009.faa test_data/pone.0192851.s009.faa > ssearchResults.txt
+python BitscoreParse.py ssearchResults.txt
+Rscript Clustering.R   #(Uses libraries 'cluster' and 'ape')
+
+```
+
+## How to Run (Step By Step)
 
 1. Pairwise Smith Waterman Bitscore Matrix Using External Tool:
    - Package Required: **Fasta36**
