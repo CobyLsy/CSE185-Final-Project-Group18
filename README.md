@@ -17,10 +17,12 @@ We’d like to implement an alternative approach to the computationally expensiv
 ## QuickRun
 
 ```
-brew install brewsci/bio/fasta  #(if fasta36 has not been installed
+brew install brewsci/bio/fasta  #(if fasta36 has not been installed)
 
 ssearch36 -m 8C test_data/pone.0192851.s009.faa test_data/pone.0192851.s009.faa > ssearchResults.txt
+
 python BitscoreParse.py ssearchResults.txt
+
 Rscript Clustering.R   #(Uses libraries 'cluster' and 'ape')
 
 ```
