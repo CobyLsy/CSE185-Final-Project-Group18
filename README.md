@@ -38,6 +38,8 @@ Rscript Clustering.R   #(Uses libraries 'cluster' and 'ape')
    - `python BitscoreParse.py ssearchResultFile` to generate similarity matrix and dissimilarity matrix based on our normalization process.
    - Example: `python BitscoreParse.py ssearchResults.txt`
    - Example Output: **BitScoreMatrixRaw.csv** - the raw bit score matrix, **symmetric_matrix_Normalized.csv** - the similarity matrix, and **dissimilarity_matrix.csv** - the dissimilarity matrix.
-3. Hiearchical Clustering and Visualization: 
+3. Hiearchical Clustering: 
    - Our R file `Clustering.R` performs hiearchical clustering using [agnes](https://www.rdocumentation.org/packages/cluster/versions/2.1.6/topics/agnes), and generates a **newick** tree file;
    - Example Output: **TreeOutputDiss**
+4. Visualization (Optional):
+   - We used a tree visualization tool called [FigTree v1.4.4](https://github.com/rambaut/figtree/releases/tag/v1.4.4) for our report.
